@@ -25,7 +25,10 @@
     "workbox-webpack-plugin": "^6.2.4"
   },
   "dependencies": {
-    "code-mirror-themes": "^1.0.0",
-    "idb": "^6.1.2"
+    "express": "^4.17.1",
+    "html-webpack-plugin": "^5.5.3",
+    "if-env": "^1.0.4",
+    "node": "^15.14.0",
+    "npm": "^7.7.6"
   }
 }
