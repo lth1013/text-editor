@@ -5,11 +5,11 @@
   "main": "server.js",
   "scripts": {
     "start:dev": "",
-    "start": "",
-    "server": "",
-    "build": "",
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd server && node server.js",
+    "build": "cd client && webpack --config webpack.config.js",
     "install": "",
-    "client": ""
+    "client": "cd client && npm start"
   },
   "keywords": [],
   "author": "",
@@ -19,7 +19,12 @@
     "if-env": "^1.0.4"
   },
   "devDependencies": {
+    "@babel/core": "^7.22.17",
+    "@babel/plugin-proposal-object-rest-spread": "^7.20.7",
+    "@babel/preset-env": "^7.22.15",
     "concurrently": "^5.2.0",
-    "nodemon": "^2.0.4"
+    "nodemon": "^2.0.4",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4"
   }
 }
