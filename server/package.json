@@ -15,8 +15,9 @@
         "if-env": "^1.0.4",
         "node": "^15.14.0",
         "npm": "^7.7.6"
-      },
+    },
     "devDependencies": {
-        "nodemon": "^2.0.4"
+        "nodemon": "^2.0.4",
+        "webpack-pwa-manifest": "^4.3.0"
     }
 }
