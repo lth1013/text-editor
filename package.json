@@ -4,35 +4,22 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start:dev": "",
-    "start": "concurrently \"npm run server\" \"npm run client\"",
-    "server": "cd server && node server.js",
-    "build": "cd client && webpack --config webpack.config.js",
-    "install": "",
+    "start:dev": "concurrently \"cd server && npm run server\" \"cd client && npm run dev\"",
+    "start": "npm run build && cd server && nodemon server.js",
+    "server": "cd server nodemon server.js --ignore client",
+    "build": "cd client && npm run build",
+    "install": "cd server && npm i && cd ../client && npm i",
     "client": "cd client && npm start"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "webpack-pwa-manifest": "^4.3.0",
     "express": "^4.17.1",
-    "html-webpack-plugin": "^5.5.3",
-    "if-env": "^1.0.4",
-    "node": "^15.14.0",
-    "npm": "^7.7.6"
+    "if-env": "^1.0.4"
   },
   "devDependencies": {
-    "@babel/core": "^7.22.17",
-    "@babel/plugin-proposal-object-rest-spread": "^7.20.7",
-    "@babel/preset-env": "^7.22.15",
     "concurrently": "^5.2.0",
-    "nodemon": "^2.0.4",
-    "webpack": "^5.88.2",
-    "webpack-cli": "^5.1.4",
-    "webpack-pwa-manifest": "^4.3.0"
-  },
-  "engines": {
-    "node": "18.x"
+    "nodemon": "^2.0.4"
   }
 }
